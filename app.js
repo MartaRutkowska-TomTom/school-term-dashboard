@@ -69,4 +69,24 @@ document.addEventListener('DOMContentLoaded', () => {
     });
     tableBox.style.display='block';
   });
+  // === OpenStreetMap (Leaflet) ===
+const map = L.map('map').setView([54.5, -3.5], 6);
+
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+  attribution: '© OpenStreetMap contributors'
+}).addTo(map);
+
+const CITY_COORDS = {
+  London: [51.5074, -0.1278],
+  Manchester: [53.4808, -2.2426],
+  Leeds: [53.8008, -1.5491],
+  Sheffield: [53.3811, -1.4701],
+  Oxford: [51.7520, -1.2577],
+  Plymouth: [50.3755, -4.1427],
+  Edinburgh: [55.9533, -3.1883],
+  Glasgow: [55.8642, -4.2518],
+  Dundee: [56.4620, -2.9707],
+  Cardiff: [51.4816, -3.1791]
+};
+``
 });
