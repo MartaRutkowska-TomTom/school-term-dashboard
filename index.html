@@ -3,11 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <title>School Term Dashboard</title>
-  <link
-  rel="stylesheet"
-  href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-/>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Leaflet CSS -->
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+  />
 
   <style>
     body {
@@ -17,7 +19,6 @@
       color: #f9fafb;
       padding: 32px;
     }
-
     h1 { font-size: 32px; margin-bottom: 24px; }
 
     .top {
@@ -103,62 +104,87 @@
     .holiday { color: #fbbf24; font-weight: 600; }
     .closed { color: #ef4444; font-weight: 600; }
     .open { color: #22c55e; font-weight: 600; }
+
+    #map {
+      height: 420px;
+      border-radius: 18px;
+    }
   </style>
 </head>
+
 <body>
+  <h1>School Term Dashboard</h1>
 
-<h1>School Term Dashboard</h1>
-
-<div class="top">
-  <div class="card">
-    <div class="clock-grid">
-      <div>
-        <div class="label">
-          <img class="flag" alt="Poland" src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 3 2'><rect width='3' height='2' fill='white'/><rect y='1' width='3' height='1' fill='%23dc143c'/></svg>">
-          Poland
+  <div class="top">
+    <div class="card">
+      <div class="clock-grid">
+        <div>
+          <div class="label">
+            <img class="flag" alt="Poland"
+              src="data:image/svg+xml;utf8,
+              <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 3 </svg>">
+            Poland
+          </div>
+          <div id="clock-pl" class="value">--:--:--</div>
         </div>
-        <div id="clock-pl" class="value">--:--:--</div>
-      </div>
 
-      <div>
-        <div class="label">
-          <img class="flag" alt="United Kingdom" src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 60 30'><rect width='60' height='30' fill='%23012169'/><path d='M0,0 L60,30 M60,0 L0,30' stroke='white' stroke-width='6'/><path d='M0,0 L60,30 M60,0 L0,30' stroke='%23c8102e' stroke-width='4'/><path d='M30,0 V30 M0,15 H60' stroke='white' stroke-width='10'/><path d='M30,0 V30 M0,15 H60' stroke='%23c8102e' stroke-width='6'/></svg>">
-          United Kingdom
+        <div>
+          <div class="label">
+            <img class="flag" alt="United Kingdom"
+              src="data:image/svg+xml;utf8,
+              <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 60 300,30' stroke='white' stroke-width='6'/>
+              <path d='M0,0 L60,30 M60,0 L0,30' stroke='%23c8102e' stroke-width='4'/>
+              <path d='M30,0 V30 M0,15 H60' stroke='white' stroke-width='10'/>
+              <path d='M30,0 V30 M0,15 H60' stroke='%23c8102e' stroke-width='6'/>
+              </svg>">
+            United Kingdom
+          </div>
+          <div id="clock-uk" class="value">--:--:--</div>
         </div>
-        <div id="clock-uk" class="value">--:--:--</div>
       </div>
+    </div>
+
+    <div class="card date-box">
+      <div class="label">Today</div>
+      <div id="current-date" class="value">--</div>
     </div>
   </div>
 
-  <div class="card date-box">
-    <div class="label">Today</div>
-    <div id="current-date" class="value">--</div>
-  </div>
-</div>
-
-<div class="card">
-  <select id="region"><option value="">Select region</option></select>
-  <select id="city" disabled><option value="">Select city</option></select>
-
-  <div id="tableContainer" style="display:none;">
-    <table>
-      <thead>
-        <tr>
-          <th>Period</th>
-          <th>From</th>
-          <th>To</th>
-          <th>Type</th>
-          <th>Status</th>
-        </tr>
-      </thead>
-      <tbody id="termTable"></tbody>
-    </table>
-  </div>
   <div class="card">
-  <div id="map" style="height: 420px; border-radius: 18px;"></div>
-</div>
-</div>
+    <select id="region">
+      <option value="">Select region</option>
+    </select>
 
-<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-<script src="app.js" defer></script>
+    <select id="city" disabled>
+      <option value="">Select city</option>
+    </select>
+
+    <div id="tableContainer" style="display:none;">
+      <table>
+        <thead>
+          <tr>
+            <th>Period</th>
+            <th>From</th>
+            <th>To</th>
+            <th>Type</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody id="termTable"></tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- MAPA -->
+  <div class="card">
+    <div id="map"></div>
+  </div>
+
+  <!-- Leaflet JS -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+  <!-- App JS -->
+  <script src="app.js" defer></script>
 </body>
+</html>
+``
