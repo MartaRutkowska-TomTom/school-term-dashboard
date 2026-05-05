@@ -5,6 +5,9 @@ on:
     - cron: "0 6 1 * *"   # raz w miesiącu (UTC)
   workflow_dispatch:
 
+  permissions:
+  contents: write
+
 jobs:
   monitor:
     runs-on: ubuntu-latest
