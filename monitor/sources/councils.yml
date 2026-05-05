@@ -1,0 +1,13 @@
+councils:
+  - name: Camden
+    base_url: https://www.camden.gov.uk
+    search_path: /search?q=school+streets
+
+  - name: Birmingham
+    base_url: https://www.birmingham.gov.uk
+    search_path: /search?q=school+streets
+
+  - name: Manchester
+    base_url: https://www.manchester.gov.uk
+    search_path: /search?q=school+streets
+``
