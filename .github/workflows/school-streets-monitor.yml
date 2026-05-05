@@ -1,11 +1,39 @@
-name: VISIBILITY TEST
+name: UK School Streets – New initiatives monitor
 
 on:
+  schedule:
+    - cron: "0 6 1 * *"   # raz w miesiącu (UTC)
   workflow_dispatch:
 
-jobs:
-  test:
-    runs-on: ubuntu-latest
-    steps:
-      - run: echo "Workflow is visible"
+permissions:
+  contents: write
 
+jobs:
+  monitor:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: |
+          pip install requests beautifulsoup4 pyyaml
+
+      - name: Run monitoring script
+        run: |
+          python monitor/scripts/monitor.py
+
+      - name: Commit generated frontend data
+        run: |
+          git config user.name "github-actions"
+          git config user.email "actions@github.com"
+
+          git add data/new-releases.json || exit 0
+          git commit -m "Update School Streets new initiatives" || exit 0
+          git push
