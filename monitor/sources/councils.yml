@@ -1,56 +1,209 @@
 councils:
-  # London
+
+  # ===== LONDON BOROUGHS =====
   - name: Camden
     base_url: https://www.camden.gov.uk
-    search_path: /search?q=school+streets
-
-  - name: Hackney
-    base_url: https://hackney.gov.uk
     search_path: /search?q=school+streets
 
   - name: Islington
     base_url: https://www.islington.gov.uk
     search_path: /search?q=school+streets
 
+  - name: Hackney
+    base_url: https://www.hackney.gov.uk
+    search_path: /search?q=school+streets
+
+  - name: Westminster
+    base_url: https://www.westminster.gov.uk
+    search_path: /search?q=school+streets
+
+  - name: Greenwich
+    base_url: https://www.royalgreenwich.gov.uk
+    search_path: /search?q=school+streets
+
+  - name: Wandsworth
+    base_url: https://www.wandsworth.gov.uk
+    search_path: /search?q=school+streets
+
   - name: Lambeth
     base_url: https://www.lambeth.gov.uk
     search_path: /search?q=school+streets
 
-  # England (outside London)
+  - name: Southwark
+    base_url: https://www.southwark.gov.uk
+    search_path: /search?q=school+streets
+
+  - name: Haringey
+    base_url: https://www.haringey.gov.uk
+    search_path: /search?q=school+streets
+
+  - name: Waltham Forest
+    base_url: https://www.walthamforest.gov.uk
+    search_path: /search?q=school+streets
+
+  - name: Ealing
+    base_url: https://www.ealing.gov.uk
+    search_path: /search?q=school+streets
+
+  - name: Croydon
+    base_url: https://www.croydon.gov.uk
+    search_path: /search?q=school+streets
+
+  - name: Newham
+    base_url: https://www.newham.gov.uk
+    search_path: /search?q=school+streets
+
+  - name: Merton
+    base_url: https://www.merton.gov.uk
+    search_path: /search?q=school+streets
+
+  - name: Kensington and Chelsea
+    base_url: https://www.rbkc.gov.uk
+    search_path: /search?q=school+streets
+
+  - name: Havering
+    base_url: https://www.havering.gov.uk
+    search_path: /search?q=school+streets
+
+  - name: Hillingdon
+    base_url: https://www.hillingdon.gov.uk
+    search_path: /search?q=school+streets
+
+  - name: Harrow
+    base_url: https://www.harrow.gov.uk
+    search_path: /search?q=school+streets
+
+  - name: Barking and Dagenham
+    base_url: https://www.lbbd.gov.uk
+    search_path: /search?q=school+streets
+
+  - name: Barnet
+    base_url: https://www.barnet.gov.uk
+    search_path: /search?q=school+streets
+
+  - name: Brent
+    base_url: https://www.brent.gov.uk
+    search_path: /search?q=school+streets
+
+  - name: Richmond upon Thames
+    base_url: https://www.richmond.gov.uk
+    search_path: /search?q=school+streets
+
+  - name: Hounslow
+    base_url: https://www.hounslow.gov.uk
+    search_path: /search?q=school+streets
+
+
+  # ===== ENGLAND (CITIES / COUNTIES) =====
   - name: Leeds
     base_url: https://www.leeds.gov.uk
     search_path: /search?query=school+streets
 
-  - name: Oxford
-    base_url: https://www.oxfordshire.gov.uk
-    search_path: /search?q=school+streets
-
-  - name: Bristol
-    base_url: https://www.bristol.gov.uk
-    search_path: /search?q=school+streets
-
-  - name: Sheffield
-    base_url: https://www.sheffield.gov.uk
+  - name: Birmingham
+    base_url: https://www.birmingham.gov.uk
     search_path: /search?q=school+streets
 
   - name: Manchester
     base_url: https://www.manchester.gov.uk
     search_path: /search?q=school+streets
 
-  - name: Birmingham
-    base_url: https://www.birmingham.gov.uk
+  - name: Sheffield
+    base_url: https://www.sheffield.gov.uk
     search_path: /search?q=school+streets
 
-  # Scotland
-  - name: Edinburgh
-    base_url: https://www.edinburgh.gov.uk
+  - name: Bristol
+    base_url: https://www.bristol.gov.uk
     search_path: /search?q=school+streets
 
+  - name: Oxford
+    base_url: https://www.oxford.gov.uk
+    search_path: /search?q=school+streets
+
+  - name: Abingdon
+    base_url: https://www.whitehorsedc.gov.uk
+    search_path: /search?q=school+streets
+
+  - name: Brighton and Hove
+    base_url: https://www.brighton-hove.gov.uk
+    search_path: /search?q=school+streets
+
+  - name: Chatham
+    base_url: https://www.medway.gov.uk
+    search_path: /search?q=school+streets
+
+  - name: Gillingham
+    base_url: https://www.medway.gov.uk
+    search_path: /search?q=school+streets
+
+  - name: Southampton
+    base_url: https://www.southampton.gov.uk
+    search_path: /search?q=school+streets
+
+  - name: Fareham
+    base_url: https://www.fareham.gov.uk
+    search_path: /search?q=school+streets
+
+  - name: Stockport
+    base_url: https://www.stockport.gov.uk
+    search_path: /search?q=school+streets
+
+  - name: Oldham
+    base_url: https://www.oldham.gov.uk
+    search_path: /search?q=school+streets
+
+  - name: Bolton
+    base_url: https://www.bolton.gov.uk
+    search_path: /search?q=school+streets
+
+  - name: Bury
+    base_url: https://www.bury.gov.uk
+    search_path: /search?q=school+streets
+
+  - name: Wigan
+    base_url: https://www.wigan.gov.uk
+    search_path: /search?q=school+streets
+
+  - name: Warrington
+    base_url: https://www.warrington.gov.uk
+    search_path: /search?q=school+streets
+
+  - name: Ashton-under-Lyne
+    base_url: https://www.tameside.gov.uk
+    search_path: /search?q=school+streets
+
+  - name: Sale
+    base_url: https://www.trafford.gov.uk
+    search_path: /search?q=school+streets
+
+  - name: Cheadle
+    base_url: https://www.stockport.gov.uk
+    search_path: /search?q=school+streets
+
+
+  # ===== SCOTLAND =====
   - name: Glasgow
     base_url: https://www.glasgow.gov.uk
     search_path: /search?q=school+streets
 
-  # Wales
+  - name: Edinburgh
+    base_url: https://www.edinburgh.gov.uk
+    search_path: /search?q=school+streets
+
+  - name: Dundee
+    base_url: https://www.dundeecity.gov.uk
+    search_path: /search?q=school+streets
+
+  - name: Clackmannanshire
+    base_url: https://www.clacks.gov.uk
+    search_path: /search?q=school+streets
+
+  - name: Elgin
+    base_url: https://www.moray.gov.uk
+    search_path: /search?q=school+streets
+
+
+  # ===== WALES =====
   - name: Cardiff
     base_url: https://www.cardiff.gov.uk
     search_path: /search?q=school+streets
+
