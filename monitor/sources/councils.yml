@@ -1,13 +1,56 @@
 councils:
+  # London
   - name: Camden
     base_url: https://www.camden.gov.uk
+    search_path: /search?q=school+streets
+
+  - name: Hackney
+    base_url: https://hackney.gov.uk
+    search_path: /search?q=school+streets
+
+  - name: Islington
+    base_url: https://www.islington.gov.uk
+    search_path: /search?q=school+streets
+
+  - name: Lambeth
+    base_url: https://www.lambeth.gov.uk
+    search_path: /search?q=school+streets
+
+  # England (outside London)
+  - name: Leeds
+    base_url: https://www.leeds.gov.uk
+    search_path: /search?query=school+streets
+
+  - name: Oxford
+    base_url: https://www.oxfordshire.gov.uk
+    search_path: /search?q=school+streets
+
+  - name: Bristol
+    base_url: https://www.bristol.gov.uk
+    search_path: /search?q=school+streets
+
+  - name: Sheffield
+    base_url: https://www.sheffield.gov.uk
+    search_path: /search?q=school+streets
+
+  - name: Manchester
+    base_url: https://www.manchester.gov.uk
     search_path: /search?q=school+streets
 
   - name: Birmingham
     base_url: https://www.birmingham.gov.uk
     search_path: /search?q=school+streets
 
-  - name: Manchester
-    base_url: https://www.manchester.gov.uk
+  # Scotland
+  - name: Edinburgh
+    base_url: https://www.edinburgh.gov.uk
     search_path: /search?q=school+streets
-``
+
+  - name: Glasgow
+    base_url: https://www.glasgow.gov.uk
+    search_path: /search?q=school+streets
+
+  # Wales
+  - name: Cardiff
+    base_url: https://www.cardiff.gov.uk
+    search_path: /search?q=school+streets
