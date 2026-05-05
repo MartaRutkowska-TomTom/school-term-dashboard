@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <title>School Term Dashboard</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+      background: linear-gradient(180deg, #020617, #0f172a 40%);
+      color: #f9fafb;
+      padding: 32px;
+    }
+    h1 { font-size: 32px; margin-bottom: 24px; }
+    .top {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-bottom: 32px;
+    }
+    .card {
+      background: rgba(17,24,39,0.75);
+      border: 1px solid #1f2933;
+      border-radius: 18px;
+      padding: 24px;
+    }
+    .clock-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+    }
+    .label {
+      color: #9ca3af;
+      font-size: 14px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .flag {
+      width: 24px;
+      height: 16px;
+      border-radius: 3px;
+      flex-shrink: 0;
+    }
+    .value {
+      font-size: 28px;
+      font-weight: 700;
+      margin-top: 6px;
+    }
+    .date-box {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+    select {
+      width: 100%;
+      margin-top: 16px;
+      padding: 12px 14px;
+      background: #020617;
+      border: 1px solid #1f2933;
+      border-radius: 12px;
+      color: #f9fafb;
+      font-size: 15px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+    thead th {
+      text-align: left;
+      padding: 12px;
+      font-size: 13px;
+      color: #9ca3af;
+      border-bottom: 1px solid #1f2933;
+    }
+    tbody td {
+      padding: 14px 12px;
+      border-bottom: 1px solid #1f2933;
+    }
+    .term { color: #22c55e; font-weight: 600; }
+    .holiday { color: #fbbf24; font-weight: 600; }
+    .closed { color: #ef4444; font-weight: 600; }
+    .open { color: #22c55e; font-weight: 600; }
+  </style>
+</head>
+<body>
+
+<h1>School Term Dashboard</h1>
+
+<div class="top">
+  <div class="card">
+    <div class="clock-grid">
+      <div>
+        <div class="label">
+          <img class="flag" alt="Poland" src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 3 2'><rect width='3' height='2' fill='white'/><rect y='1' width='3' height='1' fill='%23dc143c'/></svg>">
+          Poland
+        </div>
+        <div id="clock-pl" class="value">--:--:--</div>
+      </div>
+      <div>
+        <div class="label">
+          <img class="flag" alt="United Kingdom" src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 60 30'><rect width='60' height='30' fill='%23012169'/><path d='M0,0 L60,30 M60,0 L0,30' stroke='white' stroke-width='6'/><path d='M0,0 L60,30 M60,0 L0,30' stroke='%23c8102e' stroke-width='4'/><path d='M30,0 V30 M0,15 H60' stroke='white' stroke-width='10'/><path d='M30,0 V30 M0,15 H60' stroke='%23c8102e' stroke-width='6'/></svg>">
+          United Kingdom
+        </div>
+        <div id="clock-uk" class="value">--:--:--</div>
+      </div>
+    </div>
+  </div>
+  <div class="card date-box">
+    <div class="label">Today</div>
+    <div id="current-date" class="value">--</div>
+  </div>
+</div>
+
+<div class="card">
+  <select id="region"><option value="">Select region</option></select>
+  <select id="city" disabled><option value="">Select city</option></select>
+  <div id="tableContainer" style="display:none;">
+    <table>
+      <thead>
+        <tr>
+          <th>Period</th>
+          <th>From</th>
+          <th>To</th>
+          <th>Type</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody id="termTable"></tbody>
+    </table>
+  </div>
+</div>
+
+<script src="app.js" defer></script>
+</body>
+</html>
