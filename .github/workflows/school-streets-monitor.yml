@@ -27,7 +27,7 @@ jobs:
 
       - name: Run monitoring script
         run: |
-          python monitor/scripts/monitor.py
+          python -u monitor/scripts/monitor.py
 
       - name: Commit generated frontend data
         run: |
